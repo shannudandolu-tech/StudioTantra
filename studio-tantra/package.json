@@ -1,0 +1,20 @@
+{
+  "name": "studio-tantra",
+  "version": "0.1.0",
+  "description": "AI-powered ad creative platform for Indian SMBs and ad shops",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "test": "npm run test --workspace=frontend && npm run test --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
